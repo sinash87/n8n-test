@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #output {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Test HTML Page</h1>
+    <p>This is a test file added to the test-branch.</p>
+    
+    <div class="test-section">
+        <h2>JavaScript Test</h2>
+        <button id="testBtn">Click Me</button>
+        <div id="output">Output will appear here...</div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Test Data</h2>
+        <ul>
+            <li>Test item 1</li>
+            <li>Test item 2</li>
+            <li>Test item 3</li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('testBtn').addEventListener('click', function() {
+            const output = document.getElementById('output');
+            const timestamp = new Date().toLocaleTimeString();
+            output.innerHTML = '<strong>Button clicked at:</strong> ' + timestamp;
+            
+            // Test some basic functionality
+            const testData = {
+                message: 'Hello from test-branch!',
+                timestamp: new Date().toISOString(),
+                branch: 'test-branch'
+            };
+            console.log('Test data:', testData);
+        });
+    </script>
+</body>
+</html>
